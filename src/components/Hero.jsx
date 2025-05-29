@@ -1,31 +1,38 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import hero from "@/assets/hero.mp4"
 
 export default function HeroSection() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Vimeo Iframe - Using Vimeo's Recommended Embed Approach */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="relative w-full h-full">
-          <iframe
-            src="https://player.vimeo.com/video/1084603541?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&background=1&muted=1"
-            className="absolute w-full h-full"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-            allowFullScreen
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "100vw",
-              height: "100vh",
-              minWidth: "177.77vh" /* 16:9 aspect ratio */,
-              minHeight: "56.25vw" /* 16:9 aspect ratio */,
-            }}
-          ></iframe>
-        </div>
-      </div>
+  <div className="relative w-full h-full">
+    <video
+      className="absolute w-full h-full"
+      autoPlay
+      loop
+      muted
+      playsInline
+      style={{
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        width: "100vw",
+        height: "100vh",
+        minWidth: "177.77vh", // 16:9 aspect ratio
+        minHeight: "56.25vw", // 16:9 aspect ratio
+        objectFit: "cover",
+      }}
+    >
+      <source src={hero} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
 
       {/* Dark Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div>
