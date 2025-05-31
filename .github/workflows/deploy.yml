@@ -14,11 +14,11 @@ jobs:
       - name: Build
         run: npm run build
       - name: Deploy to Hostinger
-        uses: appleboy/scp-action@master
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          host: ${{ secrets.HOSTINGER_HOST }}
+          server: ${{ secrets.HOSTINGER_HOST }}
           username: ${{ secrets.HOSTINGER_USERNAME }}
           password: ${{ secrets.HOSTINGER_PASSWORD }}
           port: ${{ secrets.HOSTINGER_PORT }}
-          source: "dist/*"
-          target: "/home/u727271167/domains/keshavproperties.com/public_html"
+          local-dir: "./dist/"
+          server-dir: "/home/u727271167/domains/keshavproperties.com/public_html/"
