@@ -6,7 +6,6 @@ import hero from "@/assets/hero.mp4"
 export default function HeroSection() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      {/* Background Vimeo Iframe - Using Vimeo's Recommended Embed Approach */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
   <div className="relative w-full h-full">
     <video
