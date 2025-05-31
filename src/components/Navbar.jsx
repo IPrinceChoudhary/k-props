@@ -66,7 +66,7 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          {/* CTA */}
+
           <div className="flex items-center">
             <Button
               variant="secondary"
