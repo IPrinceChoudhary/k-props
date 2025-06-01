@@ -40,7 +40,7 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 md:px-8">
         <div className="text-center max-w-4xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            Available For Rent Office
+            Available For Rent Office.
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-8">
             Find your ideal space with our exclusive office rentals designed for
