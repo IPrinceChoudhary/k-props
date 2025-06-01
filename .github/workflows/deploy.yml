@@ -25,4 +25,4 @@ jobs:
           password: ${{ secrets.HOSTINGER_PASSWORD }}
           port: ${{ secrets.HOSTINGER_PORT }}
           local-dir: "dist/"
-          server-dir: "/home/u727271167/domains/keshavproperties.com/public_html"
+          server-dir: "/home/u727271167/domains/keshavproperties.com/public_html/"
